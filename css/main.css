@@ -2,6 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -52,24 +53,159 @@ table {
   border-spacing: 0;
 }
 
+:root, * {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+}
+
 :root {
   --main-lightness: 86%;
   --day-main-color:           hsl(80, 16%, var(--main-lightness) );
-  --day-main-color-light:     hsl(80, 16%, calc(var(--main-lightness) + 6%) );
-  --day-main-color-dark:      hsl(80, 16%, calc(var(--main-lightness) - 12%) );
-  --day-main-color-darker:    hsl(80, 16%, calc(var(--main-lightness) - 32%) );
-  --day-main-color-darkest:   hsl(80, 16%, calc(var(--main-lightness) - 52%) );
+  --day-main-color-light:     hsl(80, 16%, calc(var(--main-lightness) + 10%) );
+  --day-main-color-lightest:  hsl(80, 16%, calc(var(--main-lightness) + 14%) );
+  --day-main-color-dark:      hsl(80, 16%, calc(var(--main-lightness) - 24%) );
+  --day-main-color-darker:    hsl(80, 16%, calc(var(--main-lightness) - 40%) );
+  --day-main-color-darkest:   hsl(80, 16%, calc(var(--main-lightness) - 54%) );
   --accent-lightness: 40%;
   --day-accent-color:    hsl(69, 93%, var(--accent-lightness) );
 }
 
-.card {
+.neumorphic-card {
   background-color: var(--day-main-color);
   border-radius: 12px;
-  -webkit-box-shadow: -6px -6px 16px 0 var(--day-main-color-light), 6px 6px 16px 0 var(--day-main-color-dark);
-          box-shadow: -6px -6px 16px 0 var(--day-main-color-light), 6px 6px 16px 0 var(--day-main-color-dark);
-  padding: 20px;
-  color: var(--day-accent-color);
+  padding: 40px;
+  color: var(--day-main-color-darkest);
+  -webkit-box-shadow: -10px -10px 20px 0 var(--day-main-color-light), 10px 10px 20px 0 var(--day-main-color-dark);
+          box-shadow: -10px -10px 20px 0 var(--day-main-color-light), 10px 10px 20px 0 var(--day-main-color-dark);
+}
+
+#card-form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 33% 34% 33%;
+      grid-template-columns: 33% 34% 33%;
+}
+
+#card-form input, #card-form label {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1 / 4;
+}
+
+#card-form input, #card-form select {
+  font-size: 18px;
+  border: 1px solid var(--day-main-color);
+  background-color: var(--day-main-color);
+  border-radius: 6px;
+  height: 50px;
+  line-height: 50px;
+  outline: none;
+  color: inherit;
+  -webkit-box-shadow: -3px -3px 8px 0 var(--day-main-color-light), 3px 3px 8px 0 var(--day-main-color-dark);
+          box-shadow: -3px -3px 8px 0 var(--day-main-color-light), 3px 3px 8px 0 var(--day-main-color-dark);
+  -webkit-box-shadow: inset -3px -3px 8px 0 var(--day-main-color-light), inset 3px 3px 8px 0 var(--day-main-color-dark);
+          box-shadow: inset -3px -3px 8px 0 var(--day-main-color-light), inset 3px 3px 8px 0 var(--day-main-color-dark);
+}
+
+#card-form select {
+  padding-left: 16px;
+  margin-right: 10px;
+}
+
+#card-form label {
+  font-size: 14px;
+  line-height: 20px;
+  margin: 20px 0 10px;
+  padding-left: 2px;
+}
+
+#card-form label:first-of-type {
+  margin-top: 0;
+}
+
+#card-form input {
+  padding: 0 16px;
+}
+
+#card-form ::-webkit-input-placeholder {
+  opacity: 1;
+  color: var(--day-main-color-darker);
+}
+
+#card-form :-ms-input-placeholder {
+  opacity: 1;
+  color: var(--day-main-color-darker);
+}
+
+#card-form ::-ms-input-placeholder {
+  opacity: 1;
+  color: var(--day-main-color-darker);
+}
+
+#card-form ::placeholder {
+  opacity: 1;
+  color: var(--day-main-color-darker);
+}
+
+#card-form ::-moz-selection {
+  background-color: var(--day-accent-color);
+  color: var(--day-main-color-lightest);
+}
+
+#card-form ::selection {
+  background-color: var(--day-accent-color);
+  color: var(--day-main-color-lightest);
+}
+
+#card-form #exp-date-label {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / 3;
+}
+
+#card-form #exp-date {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+}
+
+#card-form #exp-year {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+}
+
+#card-form #card-cvv-label, #card-form #card-cvv {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3 / 4;
+}
+
+#card-form input#button {
+  background-color: var(--day-accent-color);
+  border-color: var(--day-accent-color);
+  margin-top: 20px;
+  color: var(--day-main-color-lightest);
+  border-radius: 6px;
+  -webkit-box-shadow: -3px -3px 8px 0 var(--day-main-color-light), 3px 3px 8px 0 var(--day-main-color-dark);
+          box-shadow: -3px -3px 8px 0 var(--day-main-color-light), 3px 3px 8px 0 var(--day-main-color-dark);
+}
+
+#card-form .test {
+  color: var(--day-main-color-darker);
+}
+
+.card-preview-container {
+  -webkit-box-shadow: -3px -3px 8px 0 var(--day-main-color-light), 3px 3px 8px 0 var(--day-main-color-dark);
+          box-shadow: -3px -3px 8px 0 var(--day-main-color-light), 3px 3px 8px 0 var(--day-main-color-dark);
+  padding: 3px;
+  border-radius: 6px;
+}
+
+.card-preview {
+  -webkit-box-shadow: inset -3px -3px 8px 0 var(--day-main-color-light), inset 3px 3px 8px 0 var(--day-main-color-dark);
+          box-shadow: inset -3px -3px 8px 0 var(--day-main-color-light), inset 3px 3px 8px 0 var(--day-main-color-dark);
+  border-radius: 6px;
 }
 
 body {

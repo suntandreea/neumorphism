@@ -9,9 +9,64 @@
 </head>
 <body>
     
-    <div class="card">
-        <p>Ala bala portocala</p>
+    <div class="neumorphic-card">
+        
+        <div class="card-preview-container">
+            <div class="card-preview">
+                <img src="" alt="Bank Logo">
+                <p>Card Number</p>
+                <p>1234 1234 1234 1234</p>
+                <p>Card Holder</p>
+                <p>JANE DOE</p>
+                <p>Expires</p>
+                <p>MM/YY</p>
+                <img src="" alt="Mastercard Logo">
+            </div>
+        </div>
 
+        <form id="card-form">
+
+            <label for="card-number" id="card-number-label">Card Number:</label>
+			<input type="tel" id="card-number" name="card-number" placeholder="1234 1234 1234 1234" autocomplete="off">
+
+            <label for="card-holder" id="card-holder-label">Card Holder:</label>
+			<input type="text" id="card-holder" name="card-holder" placeholder="Jane Doe" autocomplete="off">
+
+            <label for="exp-date" id="exp-date-label">Expiration Date:</label>
+            <label for="card-cvv" id="card-cvv-label">CVV:</label>
+			<select id="exp-date" name="exp-date" placeholder="Month">
+                <option value="" disabled="disabled" selected="selected" class="test">Month</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select>
+            <select id="exp-year" name="exp-year" placeholder="Year">
+                <option value="" disabled="disabled" selected="selected">Year</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+                <option value="2027">2027</option>
+                <option value="2028">2028</option>
+                <option value="2029">2029</option>
+                <option value="2030">2030</option>
+            </select>  
+			<input type="tel" id="card-cvv" name="card-cvv" pattern="[0-9]{3}" placeholder="123">
+
+            <input type="submit" value="Submit" id="button">
+
+        </form>
         
     </div>
 </body>

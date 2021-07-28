@@ -5,9 +5,10 @@
 @import 'base/reset';
 @import 'base/typography';
 @import 'base/variables';
+@import 'base/mixins';
 
-@import 'components/buttons';
-@import 'components/cards';
+@import 'components/neumorphic-cards';
+@import 'components/card-form';
+@import 'components/card-preview';
 
 @import 'layout/home';
-@import 'layout/forms';

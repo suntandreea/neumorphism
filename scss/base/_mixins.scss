@@ -1,0 +1,13 @@
+@function neg($val) {
+    @return $val * -1;
+}
+
+@mixin shadows-ext($distance, $blur) {
+    box-shadow: neg($distance) neg($distance) $blur 0 var(--day-main-color-light),
+                $distance $distance $blur 0 var(--day-main-color-dark);
+}
+
+@mixin shadows-int($distance, $blur) {
+    box-shadow: inset neg($distance) neg($distance) $blur 0 var(--day-main-color-light),
+               inset $distance $distance $blur 0 var(--day-main-color-dark);
+}

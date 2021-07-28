@@ -1,0 +1,85 @@
+#card-form {
+    display: grid;
+    grid-template-columns: 33% 34% 33%;
+
+    input, label {
+        grid-column: 1 / 4;
+    }
+
+    input, select {
+        font-size: 18px;
+        border: 1px solid var(--day-main-color);
+        background-color: var(--day-main-color);
+        border-radius: 6px;
+        height: 50px;
+        line-height: 50px;
+        outline: none;
+        color: inherit;
+        @include shadows-ext(3px, 8px);
+        @include shadows-int(3px, 8px);
+    }
+
+    select {
+        // justify-self: start;
+        padding-left: 16px;
+        margin-right: 10px;
+    }
+
+    label {
+        font-size: 14px;
+        line-height: 20px;
+        margin: 20px 0 10px;
+        padding-left: 2px;
+    }
+
+    label:first-of-type {
+        margin-top: 0;
+    }
+
+    input {
+        padding: 0 16px;
+    }  
+
+    ::placeholder{
+        opacity: 1;
+        color: var(--day-main-color-darker);
+    }
+
+    ::selection { 
+        background-color: var(--day-accent-color);
+        color: var(--day-main-color-lightest);
+    }
+
+    // input:focus, select:focus, input:hover, select:hover {
+    //     border-color: var(--day-accent-color);
+    // }
+    
+    #exp-date-label {
+        grid-column: 1 / 3;
+    }
+    #exp-date {
+        grid-column: 1 / 2;
+    }
+    
+    #exp-year {
+        grid-column: 2 / 3;
+    }
+    
+    #card-cvv-label, #card-cvv {
+        grid-column: 3 / 4;
+    }
+    
+    input#button {
+        background-color: var(--day-accent-color);
+        border-color: var(--day-accent-color);
+        margin-top: 20px;
+        color: var(--day-main-color-lightest);
+        border-radius: 6px;
+        @include shadows-ext(3px, 8px);
+    }
+
+    .test {
+        color: var(--day-main-color-darker);
+    }
+
+}

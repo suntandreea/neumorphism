@@ -1,0 +1,10 @@
+.card-preview-container {
+    @include shadows-ext(3px, 8px);
+    padding: 3px;
+    border-radius: 6px;
+}
+
+.card-preview {
+    @include shadows-int(3px, 8px);
+    border-radius: 6px;
+}
