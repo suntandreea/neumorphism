@@ -11,3 +11,13 @@
     box-shadow: inset neg($distance) neg($distance) $blur 0 var(--day-main-color-light),
                inset $distance $distance $blur 0 var(--day-main-color-dark);
 }
+
+@mixin square($size) {
+    width: $size;
+    height: $size;
+}
+
+@mixin round($size) {
+    @include square($size);
+    border-radius: 50%;
+}

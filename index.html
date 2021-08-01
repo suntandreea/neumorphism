@@ -5,23 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel = "stylesheet" href = "/css/dist/main.min.css">
-    <title>Document</title>
+    <title>Secure Payment</title>
 </head>
 <body>
     
     <div class="neumorphic-card">
         
         <div class="card-preview-container">
-            <div class="card-preview">
-                <img src="" alt="Bank Logo">
-                <p>Card Number</p>
-                <p>1234 1234 1234 1234</p>
-                <p>Card Holder</p>
-                <p>JANE DOE</p>
-                <p>Expires</p>
-                <p>MM/YY</p>
-                <img src="" alt="Mastercard Logo">
+            <div class="card-preview front">
+                <p class="card-embossing pan">1234 1234 1234 1234</p>
+                <div class="card-front-box">
+                    <p class="valid-label">Valid thru</p>
+                    <p class="card-embossing valid-date">12/30</p>
+                    <p class="card-embossing holder-name">WILLIAM SHAKESPEARE</p>
+                </div>
             </div>
+            <!-- <div class="card-preview back">
+                <div class="card-back-black"></div>
+                <div class="card-back-white">
+                    <span class="card-back-cvv">123</span>
+                </div>
+            </div> -->
         </div>
 
         <form id="card-form">
@@ -30,7 +34,7 @@
 			<input type="tel" id="card-number" name="card-number" placeholder="1234 1234 1234 1234" autocomplete="off">
 
             <label for="card-holder" id="card-holder-label">Card Holder:</label>
-			<input type="text" id="card-holder" name="card-holder" placeholder="Jane Doe" autocomplete="off">
+			<input type="text" id="card-holder" name="card-holder" placeholder="William Shakespeare" autocomplete="off">
 
             <label for="exp-date" id="exp-date-label">Expiration Date:</label>
             <label for="card-cvv" id="card-cvv-label">CVV:</label>
