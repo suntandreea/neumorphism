@@ -2,7 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -54,20 +54,18 @@ table {
 }
 
 :root, * {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Open Sans', Arial, sans-serif;
   font-size: 16px;
 }
 
 :root {
-  --main-lightness: 86%;
-  --day-main-color:           hsl(80, 16%, var(--main-lightness) );
-  --day-main-color-light:     hsl(80, 16%, calc(var(--main-lightness) + 10%) );
-  --day-main-color-lightest:  hsl(80, 16%, calc(var(--main-lightness) + 14%) );
-  --day-main-color-dark:      hsl(80, 16%, calc(var(--main-lightness) - 24%) );
-  --day-main-color-darker:    hsl(80, 16%, calc(var(--main-lightness) - 40%) );
-  --day-main-color-darkest:   hsl(80, 16%, calc(var(--main-lightness) - 54%) );
-  --accent-lightness: 40%;
-  --day-accent-color:    hsl(69, 93%, var(--accent-lightness) );
+  --day-main-color:           #e3e4e2;
+  --day-main-color-light:     #f7f7f7;
+  --day-main-color-lightest:  #f1f1f1;
+  --day-main-color-dark:      #777777;
+  --day-main-color-darker:    #555555;
+  --day-main-color-darkest:   #3f3f3f;
+  --day-accent-color:         #a6c307;
 }
 
 .neumorphic-card {

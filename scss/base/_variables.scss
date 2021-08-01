@@ -1,14 +1,19 @@
 :root {
-    --main-lightness: 86%;
+    // NIGHT SCHEME:
+    // --day-main-color:           #3f3f3f; // PayU official
+    // --day-main-color-light:     #555555; // PayU official
+    // --day-main-color-lightest:  #f7f7f7; 
+    // --day-main-color-dark:      #111; // PayU official
+    // --day-main-color-darker:    #eee; 
+    // --day-main-color-darkest:   #aaa; // PayU official
+    // --day-accent-color:         #a6c307; // PayU official Lime Green
 
-    --day-main-color:           hsl(80, 16%, var(--main-lightness) );
-    --day-main-color-light:     hsl(80, 16%, calc(var(--main-lightness) + 10%) );
-    --day-main-color-lightest:  hsl(80, 16%, calc(var(--main-lightness) + 14%) );
-    --day-main-color-dark:      hsl(80, 16%, calc(var(--main-lightness) - 24%) );
-    --day-main-color-darker:    hsl(80, 16%, calc(var(--main-lightness) - 40%) );
-    --day-main-color-darkest:   hsl(80, 16%, calc(var(--main-lightness) - 54%) );
+    --day-main-color:           #e3e4e2; // PayU official
+    --day-main-color-light:     #f7f7f7; // PayU official
+    --day-main-color-lightest:  #f1f1f1; 
+    --day-main-color-dark:      #777777; // PayU official
+    --day-main-color-darker:    #555555; 
+    --day-main-color-darkest:   #3f3f3f; // PayU official
+    --day-accent-color:         #a6c307; // PayU official Lime Green
 
-    --accent-lightness: 40%; 
-
-    --day-accent-color:    hsl(69, 93%, var(--accent-lightness) );
-}
+} 
