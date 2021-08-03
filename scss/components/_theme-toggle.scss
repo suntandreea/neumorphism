@@ -1,0 +1,75 @@
+#page-wrapper {
+    /* LIGHT THEME */
+    --main-color:           #e3e4e2; // PayU official
+    --main-color-light:     #f7f7f7; // PayU official
+    --main-color-lightest:  #f1f1f1; 
+    --main-color-dark:      #777777; // PayU official
+    --main-color-darker:    #555555; 
+    --main-color-darkest:   #3f3f3f; // PayU official
+}
+
+#theme-switch:checked + #page-wrapper {
+    /* DARK THEME */
+    --main-color:           #3f3f3f; // PayU official
+    --main-color-light:     #555555;
+    --main-color-lightest:  #f7f7f7; // PayU official
+    --main-color-dark:      #111; 
+    --main-color-darker:    #ccc;
+    --main-color-darkest:   #f1f1f1; 
+
+    #theme-switch-label {
+        @include shadows-int(3px, 8px);
+        color: var(--accent-color);
+    }
+
+    #theme-switch-label::before {
+        background: var(--accent-color);
+    }
+
+    .card-embossing {
+        color: var(--main-color-darkest);
+        text-shadow: -2px 2px 4px var(--main-color-light), 
+                      1px -1px 2px var(--main-color-lightest);
+    }
+
+    .card-back-cvv {
+        color: var(--main-color-light);
+    }
+}
+
+#theme-switch, #theme-switch-label {
+    position: absolute;
+}
+
+#theme-switch {
+    top: -30px;
+}
+
+#theme-switch-label {
+    font-size: 14px;
+    bottom: 20px;
+    right: 20px;
+    padding-right: 30px;
+
+    @media only screen and (max-height: 710px) {
+        display: none;
+    }
+}
+
+#theme-switch-label::before {
+    content: '';
+    @include round(14px);
+    background: var(--main-color-darkest);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#theme-switch-label::after {
+    content: '';
+    @include round(13px);
+    background: var(--main-color);
+    position: absolute;
+    top: 7px;
+    right: 5px;
+}

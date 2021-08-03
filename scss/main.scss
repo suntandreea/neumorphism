@@ -7,8 +7,9 @@
 @import 'base/variables';
 @import 'base/mixins';
 
-@import 'components/neumorphic-cards';
-@import 'components/card-form';
-@import 'components/card-preview';
+@import 'components/theme-toggle';
+@import 'components/neumorphic-elements';
+@import 'components/cc-form';
+@import 'components/cc-preview';
 
 @import 'layout/home';

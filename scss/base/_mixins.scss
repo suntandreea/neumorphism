@@ -3,13 +3,13 @@
 }
 
 @mixin shadows-ext($distance, $blur) {
-    box-shadow: neg($distance) neg($distance) $blur 0 var(--day-main-color-light),
-                $distance $distance $blur 0 var(--day-main-color-dark);
+    box-shadow: neg($distance) neg($distance) $blur 0 var(--main-color-light),
+                $distance $distance $blur 0 var(--main-color-dark);
 }
 
 @mixin shadows-int($distance, $blur) {
-    box-shadow: inset neg($distance) neg($distance) $blur 0 var(--day-main-color-light),
-               inset $distance $distance $blur 0 var(--day-main-color-dark);
+    box-shadow: inset neg($distance) neg($distance) $blur 0 var(--main-color-light),
+               inset $distance $distance $blur 0 var(--main-color-dark);
 }
 
 @mixin square($size) {

@@ -4,74 +4,81 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "stylesheet" href = "/css/dist/main.min.css">
+    <link rel = "stylesheet" href = "./css/dist/main.min.css">
     <title>Secure Payment</title>
 </head>
 <body>
     
-    <div class="neumorphic-card">
+    <input type="checkbox" id="theme-switch">
+
+    <div id="page-wrapper">
+
+        <label for="theme-switch" name="theme-switch-label" id="theme-switch-label" class="neumorphic-btn">Dark Mode</label>
+
+        <div class="neumorphic-container">
         
-        <div class="card-preview-container">
-            <div class="card-preview front">
-                <p class="card-embossing pan">1234 1234 1234 1234</p>
-                <div class="card-front-box">
-                    <p class="valid-label">Valid thru</p>
-                    <p class="card-embossing valid-date">12/30</p>
-                    <p class="card-embossing holder-name">WILLIAM SHAKESPEARE</p>
+            <div class="cc-preview-container">
+                <div class="cc-preview front">
+                    <p class="card-embossing pan noselect">1234 1234 1234 1234</p>
+                    <div class="card-front-box">
+                        <p class="valid-label noselect">Valid thru</p>
+                        <p class="card-embossing valid-date noselect">12/30</p>
+                        <p class="card-embossing holder-name noselect">WILLIAM SHAKESPEARE</p>
+                    </div>
                 </div>
-            </div>
-            <!-- <div class="card-preview back">
-                <div class="card-back-black"></div>
-                <div class="card-back-white">
-                    <span class="card-back-cvv">123</span>
-                </div>
-            </div> -->
+                <!-- <div class="cc-preview back">
+                    <div class="card-back-black"></div>
+                    <div class="card-back-white">
+                        <span class="card-back-cvv">123</span>
+                    </div>
+                </div> -->
+            </div> <!-- end of cc-preview-container -->
+    
+            <form id="cc-form">
+    
+                <label for="card-number" id="card-number-label">Card Number:</label>
+                <input type="tel" id="card-number" name="card-number" placeholder="1234 1234 1234 1234" autocomplete="off">
+    
+                <label for="card-holder" id="card-holder-label">Card Holder:</label>
+                <input type="text" id="card-holder" name="card-holder" placeholder="William Shakespeare" autocomplete="off">
+    
+                <label for="exp-date" id="exp-date-label">Expiration Date:</label>
+                <label for="card-cvv" id="card-cvv-label">CVV:</label>
+                <select id="exp-date" name="exp-date" placeholder="Month">
+                    <option value="" disabled="disabled" selected="selected" class="test">Month</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+                <select id="exp-year" name="exp-year" placeholder="Year">
+                    <option value="" disabled="disabled" selected="selected">Year</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                    <option value="2026">2026</option>
+                    <option value="2027">2027</option>
+                    <option value="2028">2028</option>
+                    <option value="2029">2029</option>
+                    <option value="2030">2030</option>
+                </select>  
+                <input type="tel" id="card-cvv" name="card-cvv" pattern="[0-9]{3}" placeholder="123">
+    
+                <input type="submit" value="Submit" id="cta-btn">
+            </form>
         </div>
 
-        <form id="card-form">
-
-            <label for="card-number" id="card-number-label">Card Number:</label>
-			<input type="tel" id="card-number" name="card-number" placeholder="1234 1234 1234 1234" autocomplete="off">
-
-            <label for="card-holder" id="card-holder-label">Card Holder:</label>
-			<input type="text" id="card-holder" name="card-holder" placeholder="William Shakespeare" autocomplete="off">
-
-            <label for="exp-date" id="exp-date-label">Expiration Date:</label>
-            <label for="card-cvv" id="card-cvv-label">CVV:</label>
-			<select id="exp-date" name="exp-date" placeholder="Month">
-                <option value="" disabled="disabled" selected="selected" class="test">Month</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-                <option value="11">11</option>
-                <option value="12">12</option>
-            </select>
-            <select id="exp-year" name="exp-year" placeholder="Year">
-                <option value="" disabled="disabled" selected="selected">Year</option>
-                <option value="2021">2021</option>
-                <option value="2022">2022</option>
-                <option value="2023">2023</option>
-                <option value="2024">2024</option>
-                <option value="2025">2025</option>
-                <option value="2026">2026</option>
-                <option value="2027">2027</option>
-                <option value="2028">2028</option>
-                <option value="2029">2029</option>
-                <option value="2030">2030</option>
-            </select>  
-			<input type="tel" id="card-cvv" name="card-cvv" pattern="[0-9]{3}" placeholder="123">
-
-            <input type="submit" value="Submit" id="button">
-
-        </form>
-        
     </div>
+
 </body>
 </html>

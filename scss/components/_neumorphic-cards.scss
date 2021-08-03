@@ -1,7 +1,0 @@
-.neumorphic-card {
-    background-color: var(--day-main-color);
-    border-radius: 12px;
-    padding: 40px;
-    color: var(--day-main-color-darkest);
-    @include shadows-ext(10px, 20px);
-}

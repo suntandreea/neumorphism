@@ -1,0 +1,24 @@
+.neumorphic-container {
+    background-color: var(--main-color);
+    border-radius: 12px;
+    padding: 20px;
+    color: var(--main-color-darkest);
+    @include shadows-ext(10px, 20px);
+
+    @media only screen and (max-height: 800px) {
+        margin-bottom: 54px;
+    }   
+}
+
+.neumorphic-btn {
+    background-color: var(--main-color);
+    border-radius: 6px;
+    padding: 10px;
+    color: var(--main-color-darkest);
+    @include shadows-ext(3px, 8px);
+    font-weight: bold;
+}
+
+.neumorphic-btn.active {
+    @include shadows-int(3px, 8px);
+}

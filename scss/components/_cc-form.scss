@@ -1,4 +1,4 @@
-#card-form {
+#cc-form {
     display: grid;
     grid-template-columns: 33% 34% 33%;
 
@@ -8,19 +8,17 @@
 
     input, select {
         font-size: 18px;
-        border: 1px solid var(--day-main-color);
-        background-color: var(--day-main-color);
+        border: 1px solid var(--main-color);
+        background-color: var(--main-color);
         border-radius: 6px;
         height: 50px;
         line-height: 50px;
         outline: none;
-        color: inherit;
-        @include shadows-ext(3px, 8px);
+        color: var(--main-color-darker);
         @include shadows-int(3px, 8px);
     }
 
     select {
-        // justify-self: start;
         padding-left: 16px;
         margin-right: 10px;
     }
@@ -30,10 +28,7 @@
         line-height: 20px;
         margin: 20px 0 10px;
         padding-left: 2px;
-    }
-
-    label:first-of-type {
-        margin-top: 0;
+        color: var(--main-color-darkest);
     }
 
     input {
@@ -42,18 +37,9 @@
 
     ::placeholder{
         opacity: 1;
-        color: var(--day-main-color-darker);
+        color: var(--main-color-darker);
     }
 
-    ::selection { 
-        background-color: var(--day-accent-color);
-        color: var(--day-main-color-lightest);
-    }
-
-    // input:focus, select:focus, input:hover, select:hover {
-    //     border-color: var(--day-accent-color);
-    // }
-    
     #exp-date-label {
         grid-column: 1 / 3;
     }
@@ -69,17 +55,12 @@
         grid-column: 3 / 4;
     }
     
-    input#button {
-        background-color: var(--day-accent-color);
-        border-color: var(--day-accent-color);
+    input#cta-btn {
+        background-color: var(--accent-color);
+        border-color: var(--accent-color);
         margin-top: 20px;
-        color: var(--day-main-color-lightest);
+        color: var(--main-color-lightest);
         border-radius: 6px;
         @include shadows-ext(3px, 8px);
     }
-
-    .test {
-        color: var(--day-main-color-darker);
-    }
-
 }
