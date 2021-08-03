@@ -17,8 +17,9 @@
     color: var(--main-color-darkest);
     @include shadows-ext(3px, 8px);
     font-weight: bold;
-}
 
-.neumorphic-btn.active {
-    @include shadows-int(3px, 8px);
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
 }
